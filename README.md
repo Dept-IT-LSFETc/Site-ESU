@@ -1,2 +1,2 @@
 # Site-ESU
-Repository for esu.lsfetc.ro
+Repository for https://esu.lsfetc.ro
