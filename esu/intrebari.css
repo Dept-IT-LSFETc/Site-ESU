@@ -51,12 +51,12 @@ body {
 }
 
 .faq-item {
-  border: 2px solid #b76c88;
+  border: 2px solid #ff005d;
   border-radius: 0.5rem;
   padding: 1rem;
   margin-bottom: 1rem;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: transform 2s ease;
 }
 
 .faq-item:hover {
@@ -83,10 +83,13 @@ body {
 }
 
 .faq-icon {
+
   font-size: 1.5rem;
-  transition: transform 0.2s ease;
+  transition: transform 0.5s ease;
 }
 
 .faq-item.open .faq-icon {
-  transform: rotate(45deg);
+  border:2px solid #ff005d;
+  border-radius: 5%;;
+  transform: rotate(405deg);
 }
