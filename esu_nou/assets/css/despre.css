@@ -1,0 +1,28 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+  background-color: #6a6a6a; /* Gri */
+}
+
+h2,
+h3 {
+  font-weight: bold;
+  margin-top: 2rem;
+  color: #7c0f34; /* Vișiniu */
+}
+
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+p {
+  font-size: 1.05rem;
+  color: #bababa; /* Gri deschis */
+}
+
+footer {
+  background-color: #1e1e1e; /* Negru */
+  color: #ededed; /* Alb */
+}

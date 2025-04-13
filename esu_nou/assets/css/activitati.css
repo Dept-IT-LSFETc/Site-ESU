@@ -1,0 +1,38 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 0.5rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  /* Using Vișiniu (7C0F34) for the hover shadow */
+  box-shadow: 0 8px 20px rgba(124, 15, 52, 0.2);
+}
+
+.card-title {
+  font-weight: 600;
+  /* Vișiniu */
+  color: #7c0f34;
+}
+
+.card-text {
+  /* Gri */
+  color: #6a6a6a;
+}
+
+footer {
+  /* Negru */
+  background-color: #1e1e1e;
+  /* Gri deschis */
+  color: #bababa;
+}

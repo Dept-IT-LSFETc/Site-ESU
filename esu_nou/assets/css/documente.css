@@ -1,0 +1,53 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  background-color: #ededed; /* Alb */
+  color: #6a6a6a; /* Gri */
+}
+
+/* Section titles */
+h1,
+h5 {
+  font-weight: bold;
+  color: #7c0f34; /* Vișiniu */
+}
+
+/* Cards */
+.card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  background-color: #ededed; /* Alb for consistency */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(124, 15, 52, 0.2); /* Vișiniu, with opacity */
+}
+
+/* Buttons */
+.btn-outline-primary {
+  border-width: 2px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #7c0f34; /* Vișiniu */
+  border-color: #7c0f34;
+  background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+  background-color: #7c0f34; /* Vișiniu */
+  color: #ededed; /* Alb */
+  border-color: #7c0f34;
+}
+
+/* Section backgrounds */
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: #ededed; /* Alb */
+}
+
+/* Footer */
+footer {
+  background-color: #1e1e1e; /* Negru */
+  color: #bababa; /* Gri deschis */
+}
