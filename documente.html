@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ESU - Universitatea de Vară în Electronică</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: "#7D1235", secondary: "#BABABB" },
+                    borderRadius: {
+                        none: "0px",
+                        sm: "4px",
+                        DEFAULT: "8px",
+                        md: "12px",
+                        lg: "16px",
+                        xl: "20px",
+                        "2xl": "24px",
+                        "3xl": "32px",
+                        full: "9999px",
+                        button: "8px",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .hero-section {
+            background-image: linear-gradient(to right, rgba(125, 18, 53, 0.9), rgba(125, 18, 53, 0.7), rgba(0, 0, 0, 0.5)), url('imagini/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #7D1235;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .testimonial-card {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .activity-card:hover .activity-overlay {
+            opacity: 1;
+        }
+
+        .activity-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+
+<body class="documente">
+    <!-- Header -->
+    <header class="fixed w-full z-50 transition-all duration-300" id="header">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="esu.html">
+                <img src="imagini/sigla-alb.png" alt="Logo" class="logo">
+            </a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section min-h-screen flex items-center w-full">
+        <div class="container mx-auto px-4 py-16 text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+                Documente necesare pentru înscriere
+            </h1>
+        </div>
+    </section>
+    <style>
+        /* Center heading */
+        .documente .text-center {
+            text-align: center;
+        }
+
+        .documente .fw-bold {
+            font-weight: 700;
+        }
+
+        .documente .mb-4 {
+            margin-bottom: 1.5rem;
+        }
+
+        .titludoc{
+            font-size: 2.5rem;
+            color: #1a202c;
+        }
+
+        @media (max-width: 768px) {
+            .documente h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Grid container for buttons */
+        .documente .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Button styling */
+        .documente .doc-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #7D1235;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            /* Matches Tailwind's DEFAULT radius */
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .documente .doc-button:hover {
+            background-color: #5a0e27;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Large button styling */
+        .documente .large-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #7D1235;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 1.25rem 2rem;
+            border-radius: 8px;
+            /* Matches Tailwind's DEFAULT radius */
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .documente .large-button:hover {
+            background-color: #5a0e27;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .documente .grid-container {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                max-width: 100%;
+            }
+
+            .documente .doc-button {
+                padding: 0.85rem 1.25rem;
+                font-size: 0.95rem;
+            }
+
+            .documente .large-button {
+                padding: 1rem 1.75rem;
+                font-size: 1.1rem;
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .documente h1 {
+                font-size: 1.75rem;
+            }
+
+            .documente .grid-container {
+                gap: 0.75rem;
+            }
+
+            .documente .doc-button {
+                padding: 0.75rem 1rem;
+            }
+
+            .documente .large-button {
+                padding: 0.85rem 1.5rem;
+                font-size: 1rem;
+                max-width: 100%;
+            }
+        }
+    </style>
+
+    <body class="documente">
+        <h1 class="text-center fw-bold mb-4 titludoc">Documente</h1>
+
+        <div class="grid-container">
+            <a href="acord.pdf" class="doc-button" target="_blank">Acord parental</a>
+            <a href="declaratie.pdf" class="doc-button" target="_blank">Declarație pe propria răspundere</a>
+            <a href="gdpr.pdf" class="doc-button" target="_blank">GDPR ESU</a>
+            <a href="regulament.pdf" class="doc-button" target="_blank">Regulament ESU</a>
+        </div>
+        <h2 class="section-title invisible">Spacer</h2>
+
+    </body>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <a href="esu.html">
+                        <img src="imagini/sigla.png" alt="Logo" class="logo">
+                    </a>
+                    <br><br>
+                    <p class="text-gray-400 mb-4">
+                        Universitatea de Vară în Electronică - o experiență unică pentru
+                        elevii pasionați de tehnologie.
+                    </p>
+                    <p class="text-gray-400">
+                        © 2025 Liga Studenților din Facultatea de Electronică și
+                        Telecomunicații. Toate drepturile rezervate.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="section-title invisible">Spacer</h2>
+
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Parteneri</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="bg-gray-800 p-2 rounded">
+                            <i class="ri-building-line ri-2x text-gray-400"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-2 rounded">
+                            <i class="ri-building-2-line ri-2x text-gray-400"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-2 rounded">
+                            <i class="ri-building-4-line ri-2x text-gray-400"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-2 rounded">
+                            <i class="ri-building-3-line ri-2x text-gray-400"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-500 mb-4 md:mb-0">
+                    Dezvoltat cu ❤️ de LSFETc
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById("mobile-menu-button");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            mobileMenuButton.addEventListener("click", function () {
+                mobileMenu.classList.toggle("hidden");
+                if (mobileMenu.classList.contains("hidden")) {
+                    mobileMenuButton.innerHTML =
+                        '<i class="ri-menu-line ri-xl text-primary"></i>';
+                } else {
+                    mobileMenuButton.innerHTML =
+                        '<i class="ri-close-line ri-xl text-primary"></i>';
+                }
+            });
+
+            // Close mobile menu when clicking on a link
+            const mobileLinks = mobileMenu.querySelectorAll("a");
+            mobileLinks.forEach((link) => {
+                link.addEventListener("click", function () {
+                    mobileMenu.classList.add("hidden");
+                    mobileMenuButton.innerHTML =
+                        '<i class="ri-menu-line ri-xl text-primary"></i>';
+                });
+            });
+
+            // Header background change on scroll for larger screens
+            const header = document.getElementById("header");
+            const navLinks = document.querySelectorAll(
+                "a[href='#despre'], a[href='#program'], a[href='#galerie'], a[href='#contact'], a[href='documente.html']"
+            );
+            const logo = document.querySelector("#header img"); // Assuming the logo is an img tag inside the header
+
+            function updateHeaderStyle() {
+                // Check if screen width is larger than 768px (typical mobile breakpoint)
+                if (window.innerWidth > 768) {
+                    if (window.scrollY < 50) {
+                        header.classList.remove("bg-white", "shadow-md");
+                        header.classList.add("bg-transparent");
+                        navLinks.forEach((link) => (link.style.color = "white")); // Set text to white
+                        logo.src = "imagini/sigla-alb.png"; // White logo
+                    } else {
+                        header.classList.add("bg-white", "shadow-md");
+                        header.classList.remove("bg-transparent");
+                        navLinks.forEach((link) => (link.style.color = "")); // Reset to default color
+                        logo.src = "imagini/sigla.png"; // Original logo
+                    }
+                } else {
+                    // Ensure default styles for mobile
+                    header.classList.add("bg-white", "shadow-md");
+                    header.classList.remove("bg-transparent");
+                    navLinks.forEach((link) => (link.style.color = "")); // Reset to default color
+                    logo.src = "imagini/sigla.png"; // Original logo
+                }
+            }
+
+            // Apply header style on scroll and resize
+            window.addEventListener("scroll", updateHeaderStyle);
+            window.addEventListener("resize", updateHeaderStyle);
+
+            // Initial header style
+            updateHeaderStyle();
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute("href");
+                    if (targetId === "#") return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: "smooth",
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

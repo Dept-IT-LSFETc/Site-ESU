@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ESU - Universitatea de Vară în Electronică</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: "#7D1235", secondary: "#BABABB" },
+                    borderRadius: {
+                        none: "0px",
+                        sm: "4px",
+                        DEFAULT: "8px",
+                        md: "12px",
+                        lg: "16px",
+                        xl: "20px",
+                        "2xl": "24px",
+                        "3xl": "32px",
+                        full: "9999px",
+                        button: "8px",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .hero-section {
+            background-image: linear-gradient(to top, rgba(125, 18, 53, 0.9), rgba(125, 18, 53, 0.7), rgba(0, 0, 0, 0.4)), url('imagini/banner.JPG');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #7D1235;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .testimonial-card {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .activity-card:hover .activity-overlay {
+            opacity: 1;
+        }
+
+        .activity-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        .butform {
+            display: inline-block;
+            padding: 20px 40px;
+            background-color: #ffffff;
+            /* white background */
+            color: #7a1e39;
+            /* deep red text, matching your button */
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 20px;
+            /* large, soft corners */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            /* soft shadow */
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .butform:hover {
+            background-color: #f4f4f4;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <!-- Header -->
+    <header class="fixed w-full z-50 transition-all duration-300" id="header">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="esu.html">
+                <img src="imagini/sigla.png" alt="Logo" class="logo">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8" class="desktop-nav">
+                <a href="#despre" class="nav-link text-gray-800 hover:text-primary font-medium">Despre</a>
+                <a href="#program" class="nav-link text-gray-800 hover:text-primary font-medium">Program</a>
+                <a href="#galerie" class="nav-link text-gray-800 hover:text-primary font-medium">Galerie</a>
+                <a href="#contact" class="nav-link text-gray-800 hover:text-primary font-medium">Contact</a>
+                <a href="documente.html" class="nav-link text-gray-800 hover:text-primary font-medium">Documente
+                    necesare</a>
+            </nav>
+
+            <!-- Mobile Navigation Toggle -->
+            <div class="md:hidden w-10 h-10 flex items-center justify-center cursor-pointer" id="mobile-menu-button">
+                <i class="ri-menu-line ri-xl text-primary"></i>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="md:hidden hidden bg-white shadow-lg absolute w-full" id="mobile-menu">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+                <a href="#despre" class="text-gray-800 hover:text-primary font-medium py-2">Despre</a>
+                <a href="#program" class="text-gray-800 hover:text-primary font-medium py-2">Program</a>
+                <a href="#galerie" class="text-gray-800 hover:text-primary font-medium py-2">Galerie</a>
+                <a href="#contact" class="text-gray-800 hover:text-primary font-medium py-2">Contact</a>
+                <a href="documente.html" class="nav-link text-gray-800 hover:text-primary font-medium">Documente
+                    necesare</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section min-h-screen flex items-center w-full">
+        <div class="container mx-auto px-4 py-16 text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+                Trăiește ca student la ESU!
+            </h1>
+            <p class="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
+                Universitate de vară de 2 săptămâni - învață electronică, distrează-te și
+                leagă prietenii noi!
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+                <a href="#inscriere"
+                    class="bg-[#1C1D1D] text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">Înscrie-te!</a>
+                <a href="#despre"
+                    class="border-2 border-secondary text-white px-8 py-3 !rounded-button font-medium hover:bg-white hover:bg-opacity-10 transition whitespace-nowrap">Află
+                    mai mult</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ce e ESU Section -->
+    <section id="despre" class="py-20 bg-secondary bg-opacity-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
+                Ce este <span class="text-primary">ESU</span>?
+            </h2>
+            <div class="max-w-4xl mx-auto">
+                <p class="text-lg text-gray-700 mb-8 text-center">
+                    ESU este
+                    <span class="font-semibold text-primary">o universitate de vară gratuită</span>
+                    organizată de Liga Studenților din Facultatea de Electronică și
+                    Telecomunicații (LSFETc) de la Politehnica Timișoara, dedicat
+                    elevilor de clasa a 11-a.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary rounded-full mb-4">
+                            <i class="ri-calendar-line ri-xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-primary">Când?</h3>
+                        <p class="text-center text-gray-700">
+                            20 august - 2 septembrie 2025
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary rounded-full mb-4">
+                            <i class="ri-map-pin-line ri-xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-primary">Unde?</h3>
+                        <p class="text-center text-gray-700">
+                            Facultatea de Electronică și Telecomunicații, Politehnica
+                            Timișoara
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary rounded-full mb-4">
+                            <i class="ri-user-line ri-xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2 text-primary">
+                            Pentru cine?
+                        </h3>
+                        <p class="text-center text-gray-700">
+                            Elevi de clasa a 11-a
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ce faci la ESU Section -->
+    <section id="program" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">
+                Ce faci la <span class="text-primary">ESU</span>?
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Workshop-uri -->
+                <div class="activity-card rounded overflow-hidden shadow-lg group relative">
+                    <div class="overflow-hidden h-48">
+                        <img class="w-full h-full object-cover transition-transform duration-500"
+                            src="imagini/workshop.jpg" alt="Workshop de electronică" />
+                    </div>
+                    <div class="px-6 py-4">
+                        <h3 class="text-xl font-semibold mb-2 text-primary">
+                            Workshop-uri practice
+                        </h3>
+                        <p class="text-gray-700 text-sm">
+                            Învață să proiectezi circuite electronice și să programezi
+                            microcontrolere sub îndrumarea studenților și profesorilor.
+                        </p>
+                    </div>
+                    <div
+                        class="activity-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <p class="text-white text-center px-4">
+                            Vei lucra la proiecte reale și vei dobândi abilități practice
+                            valoroase în domeniul electronicii.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Olimpiada Trăsniților -->
+                <div class="activity-card rounded overflow-hidden shadow-lg group relative">
+                    <div class="overflow-hidden h-48">
+                        <img class="w-full h-full object-cover transition-transform duration-500"
+                            src="imagini/olimpiada.JPG" alt="Olimpiada Trăsniților" />
+                    </div>
+                    <div class="px-6 py-4">
+                        <h3 class="text-xl font-semibold mb-2 text-primary">
+                            Olimpiada Trăsniților
+                        </h3>
+                        <p class="text-gray-700 text-sm">
+                            Participă la competiții amuzante unde pui în practică ce ai
+                            învățat într-o atmosferă relaxată și distractivă.
+                        </p>
+                    </div>
+                    <div
+                        class="activity-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <p class="text-white text-center px-4">
+                            Concurează în echipe și rezolvă provocări electronice creative
+                            într-un mod distractiv.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Vânătoare de comori -->
+                <div class="activity-card rounded overflow-hidden shadow-lg group relative">
+                    <div class="overflow-hidden h-48">
+                        <img class="w-full h-full object-cover transition-transform duration-500"
+                            src="imagini/olimpiada.heic" alt="Vânătoare de comori" />
+                    </div>
+                    <div class="px-6 py-4">
+                        <h3 class="text-xl font-semibold mb-2 text-primary">
+                            Vânătoare de comori
+                        </h3>
+                        <p class="text-gray-700 text-sm">
+                            Descoperă Timișoara într-un mod interactiv, rezolvând puzzle-uri
+                            și explorând cele mai frumoase locuri din oraș.
+                        </p>
+                    </div>
+                    <div
+                        class="activity-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <p class="text-white text-center px-4">
+                            O aventură urbană care îmbină tehnologia cu explorarea orașului
+                            într-un mod captivant.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Petreceri și socializare -->
+                <div class="activity-card rounded overflow-hidden shadow-lg group relative">
+                    <div class="overflow-hidden h-48">
+                        <img class="w-full h-full object-cover transition-transform duration-500"
+                            src="imagini/facultate.JPG" alt="Petreceri și socializare" />
+                    </div>
+                    <div class="px-6 py-4">
+                        <h3 class="text-xl font-semibold mb-2 text-primary">
+                            Socializare prin facultate
+                        </h3>
+                        <p class="text-gray-700 text-sm">
+                            Leagă prietenii noi și trăiește experiența vieții de student
+                            prin activități de socializare și cursuri interactive.
+                        </p>
+                    </div>
+                    <div
+                        class="activity-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <p class="text-white text-center px-4">
+                            Experimentează atmosfera studențească autentică și creează
+                            amintiri de neuitat.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">
+                Ce spun <span class="text-[#7D1235]">participanții</span>
+            </h2>
+
+            <div class="relative max-w-5xl mx-auto">
+                <!-- Carousel Container -->
+                <div class="testimonial-carousel overflow-hidden">
+                    <div class="carousel-track flex transition-transform duration-500 ease-in-out">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-card flex-none w-full md:w-1/2 px-4">
+                            <div class="bg-white p-6 rounded-lg shadow-md h-full">
+                                <div class="flex justify-center mb-4 text-[#7D1235]">
+                                    <i class="ri-double-quotes-l ri-3x"></i>
+                                </div>
+                                <p class="text-gray-700 mb-6 text-center">
+                                    ESU pentru mine a fost o adevarata poveste plina de întorături și situații diferite.
+                                    Am trăit toate emoțiile, de la lacrimi de fericire, presiune, până la cele de
+                                    tristețe atunci cand a trebuit să părăsesc oamenii speciali și prietenii pe care mi
+                                    i-am făcut pe parcursul celor două săptămâni ale proiectului. Încurajez cu
+                                    sinceritate pe toată lumea căreia i se oferă această oportunitate să o primească cu
+                                    brațele deschise și să își construiască propria aventură. Am cunoscut persoane atât
+                                    din domeniul în care doresc să activez, cât și persoane cu hobby-uri diferite prin
+                                    prisma cărora am învățat multe alte lucruri interesante la care nici nu m-am gândit
+                                    vreodată. Sunt recunoscător că am participat la ESU, astfel doresc să le mulțumesc
+                                    tuturor organizatorilor și voluntarilor care au depus eforturi nemaipomenite pentru
+                                    a crea această experiență unică.
+                                </p>
+                                <div class="flex items-center justify-center">
+                                    <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                        <img src="imagini/copil1.jpeg" alt="Andreea"
+                                            class="w-full h-full object-cover" />
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-[#7D1235]">Călăpăreanu Ionuţ-David</p>
+                                        <p class="text-sm text-[#BABABB]"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-card flex-none w-full md:w-1/2 px-4">
+                            <div class="bg-white p-6 rounded-lg shadow-md h-full">
+                                <div class="flex justify-center mb-4 text-[#7D1235]">
+                                    <i class="ri-double-quotes-l ri-3x"></i>
+                                </div>
+                                <p class="text-gray-700 mb-6 text-center">
+                                    Pentru mine ESU a însemnat mai mult decât o simplă Universitate de Vară. În aceste
+                                    două săptămâni pe care le-am petrecut la ESU ca participant, am avut ocazia să
+                                    descopăr și să învăț lucruri noi de la diverși oameni din diferite colțuri ale
+                                    țării. Datorită lor am început să mă simt în largul meu, trăind ,,viața de student”
+                                    la maxim. Acest lucru ne-a ajutat sa creăm cele mai frumoase și de neuitat amintiri
+                                    care ne vor rămâne în suflet tot restul vieții. Pot spune că ESU a fost mai mult
+                                    decât un proces de dezvoltare în viața mea, a fost locul pe care l-am putut numi
+                                    “acasă”.
+                                </p>
+                                <div class="flex items-center justify-center">
+                                    <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                        <img src="imagini/copil2.png" alt="Mihai" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-[#7D1235]">Cenușe Darius-Bogdan</p>
+                                        <p class="text-sm text-[#BABABB]"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-card flex-none w-full md:w-1/2 px-4">
+                            <div class="bg-white p-6 rounded-lg shadow-md h-full">
+                                <div class="flex justify-center mb-4 text-[#7D1235]">
+                                    <i class="ri-double-quotes-l ri-3x"></i>
+                                </div>
+                                <p class="text-gray-700 mb-6 text-center">
+                                    ESU pentru mine a fost o experiență de neuitat, plină de învățare și conexiuni cu
+                                    oameni pasionați de electronică. A fost o oportunitate fantastică de a explora noi
+                                    idei și de a colabora cu colegi din domeniu. Atmosfera a fost stimulatoare și m-a
+                                    inspirat să-mi dezvolt abilitățile și cunoștințele. M-am simțit parte dintr-o
+                                    comunitate vibrantă, unde fiecare moment a fost unul foarte special. În cele două
+                                    săptămâni am învățat multe lucruri despre facultate dar cel mai important a fost
+                                    faptul că am învățat ce înseamnă prietenia și o viață de student alături de cei mai
+                                    buni oameni care au potențialul de a ajuta și de a fi într-adevăr o echipă care
+                                    lucrează împreună!
+                                </p>
+                                <div class="flex items-center justify-center">
+                                    <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                        <img src="imagini/copil4.png" alt="Elena" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-[#7D1235]">Danciu Diana</p>
+                                        <p class="text-sm text-[#BABABB]"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 4 -->
+                        <div class="testimonial-card flex-none w-full md:w-1/2 px-4">
+                            <div class="bg-white p-6 rounded-lg shadow-md h-full">
+                                <div class="flex justify-center mb-4 text-[#7D1235]">
+                                    <i class="ri-double-quotes-l ri-3x"></i>
+                                </div>
+                                <p class="text-gray-700 mb-6 text-center">
+                                    ESU pentru mine nu a însemnat doar un proiect, ci două săptămâni pline de emoții și
+                                    stări diferite. M-am dezvoltat foarte mult pe plan personal și am reușit să înțeleg
+                                    mult mai bine oamenii din jurul meu. Deși la început părea greu să mă acomodez, la
+                                    final am plecat cu o a doua familie și o mulțime de amintiri unice pe care le-aș
+                                    trăi din nou cu același entuziasm.
+                                </p>
+                                <div class="flex items-center justify-center">
+                                    <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                        <img src="imagini/copil3.png" alt="Radu" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-[#7D1235]">Radu Marin</p>
+                                        <p class="text-sm text-[#BABABB]">București</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <button
+                    class="prev-btn absolute top-1/2 left-0 transform -translate-y-1/2 bg-[#7D1235] text-white p-2 rounded-full hover:bg-[#5f0e28] disabled:opacity-50 disabled:cursor-not-allowed"
+                    aria-label="Previous slide">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>
+                </button>
+                <button
+                    class="next-btn absolute top-1/2 right-0 transform -translate-y-1/2 bg-[#7D1235] text-white p-2 rounded-full hover:bg-[#5f0e28] disabled:opacity-50 disabled:cursor-not-allowed"
+                    aria-label="Next slide">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for Carousel -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const track = document.querySelector('.carousel-track');
+            const cards = document.querySelectorAll('.testimonial-card');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            let currentIndex = 0;
+            let cardsPerSlide = window.innerWidth >= 768 ? 2 : 1;
+            const totalCards = cards.length;
+
+            function updateButtons() {
+                prevBtn.disabled = currentIndex === 0;
+                nextBtn.disabled = currentIndex >= totalCards - cardsPerSlide;
+            }
+
+            function updateCarousel() {
+                const offset = -currentIndex * (100 / cardsPerSlide);
+                track.style.transform = `translateX(${offset}%)`;
+                updateButtons();
+            }
+
+            function updateCardsPerSlide() {
+                cardsPerSlide = window.innerWidth >= 768 ? 2 : 1;
+                currentIndex = Math.min(currentIndex, totalCards - cardsPerSlide);
+                updateCarousel();
+            }
+
+            prevBtn.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            });
+
+            nextBtn.addEventListener('click', () => {
+                if (currentIndex < totalCards - cardsPerSlide) {
+                    currentIndex++;
+                    updateCarousel();
+                }
+            });
+
+            window.addEventListener('resize', updateCardsPerSlide);
+
+            // Initial setup
+            updateCardsPerSlide();
+        });
+    </script>
+    </section>
+
+
+    <!-- Înscriere Section -->
+    <section id="inscriere" class="py-20 bg-primary bg-opacity-10">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-800">
+                Ești pregătit să trăiești <span class="text-primary">experiența ESU</span>?
+            </h2>
+            <p class="text-lg text-gray-700 mb-10 max-w-2xl mx-auto">
+                Înscrie-te acum pentru a rezerva un loc la Universitatea de Vară în
+                Electronică 2025. Locurile sunt limitate!
+            </p>
+
+            <div>
+                <a class="butform"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSefa42hrx8s35rvgXrw3flc6mgAI9eENuG5K7_JGkGf0ge1iQ/viewform"
+                    target="_blank">
+                    Înscrie-te acum!
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Galerie Section -->
+    <section id="galerie" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">
+                Galerie <span class="text-primary">ESU</span>
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="overflow-hidden rounded">
+                    <img src="imagini/galerie1.jpg" alt="Workshop electronică"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300" />
+                </div>
+                <div class="overflow-hidden rounded">
+                    <img src="imagini/galerie2.jpg" alt="Workshop electronică"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300" />
+                </div>
+                <div class="overflow-hidden rounded">
+                    <img src="imagini/galerie3.jpg" alt="Workshop electronică"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300" />
+                </div>
+                <div class="overflow-hidden rounded">
+                    <img src="imagini/galerie4.jpg" alt="Workshop electronică"
+                    class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300" />
+                </div>
+                <div class="overflow-hidden rounded">
+                    <img src="imagini/galerie5.jpg" alt="Workshop electronică"
+                    class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300" />
+                </div>
+                <div class="overflow-hidden rounded">
+                    <img src="imagini/galerie6.jpg" alt="Workshop electronică"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300" />
+                </div>
+                <div class="overflow-hidden rounded">
+                    <img src="imagini/galerie7.jpg" alt="Workshop electronică"
+                    class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300" />
+                </div>
+                <div class="overflow-hidden rounded">
+                    <img src="imagini/galeire8.jpg" alt="Workshop electronică"
+                        class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">
+                Contactează-<span class="text-primary">ne</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-primary">
+                        Informații de contact
+                    </h3>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div
+                                class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+                                <i class="ri-map-pin-line ri-lg text-primary"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium text-gray-800">Adresă</p>
+                                <p class="text-gray-600">
+                                    Facultatea de Electronică și Telecomunicații, Bd. Vasile
+                                    Pârvan 2, Timișoara
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div
+                                class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+                                <i class="ri-mail-line ri-lg text-primary"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium text-gray-800">Email</p>
+                                <p class="text-gray-600">esu@lsfetc.ro</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div
+                                class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+                                <i class="ri-phone-line ri-lg text-primary"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium text-gray-800">Telefon</p>
+                                <p class="text-gray-600">+40 256 403 300</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div
+                                class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4">
+                                <i class="ri-time-line ri-lg text-primary"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium text-gray-800">Program</p>
+                                <p class="text-gray-600">Luni - Vineri: 9:00 - 17:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-10">
+                        <h4 class="text-lg font-semibold mb-4 text-gray-800">
+                            Urmărește-ne
+                        </h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/esutimisoara"
+                                class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full hover:bg-opacity-90 transition">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            <a href="https://www.instagram.com/esu.lsfetc/"
+                                class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full hover:bg-opacity-90 transition">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@lsfetc.timisoara"
+                                class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full hover:bg-opacity-90 transition">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-primary">
+                        Trimite-ne un mesaj
+                    </h3>
+
+                    <form class="space-y-6">
+                        <div class="flex flex-col">
+                            <label for="contact-nume" class="mb-2 text-gray-700 font-medium">Nume și prenume</label>
+                            <input type="text" id="contact-nume"
+                                class="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" />
+                        </div>
+
+                        <div class="flex flex-col">
+                            <label for="contact-email" class="mb-2 text-gray-700 font-medium">Email</label>
+                            <input type="email" id="contact-email"
+                                class="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" />
+                        </div>
+
+                        <div class="flex flex-col">
+                            <label for="contact-subiect" class="mb-2 text-gray-700 font-medium">Subiect</label>
+                            <input type="text" id="contact-subiect"
+                                class="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" />
+                        </div>
+
+                        <div class="flex flex-col">
+                            <label for="contact-mesaj" class="mb-2 text-gray-700 font-medium">Mesaj</label>
+                            <textarea id="contact-mesaj" rows="4"
+                                class="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">
+                            Trimite mesajul
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <a href="esu.html">
+                        <img src="imagini/sigla.png" alt="Logo" class="logo">
+                    </a>
+                    <br><br>
+                    <p class="text-gray-400 mb-4">
+                        Universitatea de Vară în Electronică - o experiență unică pentru
+                        elevii pasionați de tehnologie.
+                    </p>
+                    <p class="text-gray-400">
+                        © 2025 Liga Studenților din Facultatea de Electronică și
+                        Telecomunicații. Toate drepturile rezervate.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Link-uri rapide</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#despre" class="text-gray-400 hover:text-primary transition">Despre ESU</a>
+                        </li>
+                        <li>
+                            <a href="#program" class="text-gray-400 hover:text-primary transition">Program</a>
+                        </li>
+                        <li>
+                            <a href="#galerie" class="text-gray-400 hover:text-primary transition">Galerie</a>
+                        </li>
+                        <li>
+                            <a href="#inscriere" class="text-gray-400 hover:text-primary transition">Înscriere</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="text-gray-400 hover:text-primary transition">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Parteneri</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="bg-gray-800 p-2 rounded">
+                            <i class="ri-building-line ri-2x text-gray-400"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-2 rounded">
+                            <i class="ri-building-2-line ri-2x text-gray-400"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-2 rounded">
+                            <i class="ri-building-4-line ri-2x text-gray-400"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-2 rounded">
+                            <i class="ri-building-3-line ri-2x text-gray-400"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-500 mb-4 md:mb-0">
+                    Dezvoltat cu ❤️ de LSFETc
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById("mobile-menu-button");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            mobileMenuButton.addEventListener("click", function () {
+                mobileMenu.classList.toggle("hidden");
+                if (mobileMenu.classList.contains("hidden")) {
+                    mobileMenuButton.innerHTML =
+                        '<i class="ri-menu-line ri-xl text-primary"></i>';
+                } else {
+                    mobileMenuButton.innerHTML =
+                        '<i class="ri-close-line ri-xl text-primary"></i>';
+                }
+            });
+
+            // Close mobile menu when clicking on a link
+            const mobileLinks = mobileMenu.querySelectorAll("a");
+            mobileLinks.forEach((link) => {
+                link.addEventListener("click", function () {
+                    mobileMenu.classList.add("hidden");
+                    mobileMenuButton.innerHTML =
+                        '<i class="ri-menu-line ri-xl text-primary"></i>';
+                });
+            });
+
+            // Header background change on scroll for larger screens
+            const header = document.getElementById("header");
+            const navLinks = document.querySelectorAll(
+                "a[href='#despre'], a[href='#program'], a[href='#galerie'], a[href='#contact'], a[href='documente.html']"
+            );
+            const logo = document.querySelector("#header img"); // Assuming the logo is an img tag inside the header
+
+            function updateHeaderStyle() {
+                // Check if screen width is larger than 768px (typical mobile breakpoint)
+                if (window.innerWidth > 768) {
+                    if (window.scrollY < 50) {
+                        header.classList.remove("bg-white", "shadow-md");
+                        header.classList.add("bg-transparent");
+                        navLinks.forEach((link) => (link.style.color = "white")); // Set text to white
+                        logo.src = "imagini/sigla-alb.png"; // White logo
+                    } else {
+                        header.classList.add("bg-white", "shadow-md");
+                        header.classList.remove("bg-transparent");
+                        navLinks.forEach((link) => (link.style.color = "")); // Reset to default color
+                        logo.src = "imagini/sigla.png"; // Original logo
+                    }
+                } else {
+                    // Ensure default styles for mobile
+                    header.classList.add("bg-white", "shadow-md");
+                    header.classList.remove("bg-transparent");
+                    navLinks.forEach((link) => (link.style.color = "")); // Reset to default color
+                    logo.src = "imagini/sigla.png"; // Original logo
+                }
+            }
+
+            // Apply header style on scroll and resize
+            window.addEventListener("scroll", updateHeaderStyle);
+            window.addEventListener("resize", updateHeaderStyle);
+
+            // Initial header style
+            updateHeaderStyle();
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute("href");
+                    if (targetId === "#") return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: "smooth",
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
