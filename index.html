@@ -68,9 +68,6 @@
             width: 100%;
         }
 
-        .testimonial-card {
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
 
         .activity-card:hover .activity-overlay {
             opacity: 1;
@@ -127,10 +124,11 @@
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex space-x-8" class="desktop-nav">
                 <a href="#despre" class="nav-link text-gray-800 hover:text-primary font-medium">Despre</a>
-                <a href="#program" class="nav-link text-gray-800 hover:text-primary font-medium">Program</a>
+                <a href="#program" class="nav-link text-gray-800 hover:text-primary font-medium">Activități</a>
+                <a href="#editii" class="nav-link text-gray-800 hover:text-primary font-medium">Ediții anterioare</a>
                 <a href="#galerie" class="nav-link text-gray-800 hover:text-primary font-medium">Galerie</a>
                 <a href="#contact" class="nav-link text-gray-800 hover:text-primary font-medium">Contact</a>
-                <a href="documente.html" class="nav-link text-gray-800 hover:text-primary font-medium">Documente
+                <a href="documente" class="nav-link text-gray-800 hover:text-primary font-medium">Documente
                     necesare</a>
             </nav>
 
@@ -144,10 +142,10 @@
         <div class="md:hidden hidden bg-white shadow-lg absolute w-full" id="mobile-menu">
             <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
                 <a href="#despre" class="text-gray-800 hover:text-primary font-medium py-2">Despre</a>
-                <a href="#program" class="text-gray-800 hover:text-primary font-medium py-2">Program</a>
+                <a href="#program" class="text-gray-800 hover:text-primary font-medium py-2">Activități</a>
                 <a href="#galerie" class="text-gray-800 hover:text-primary font-medium py-2">Galerie</a>
                 <a href="#contact" class="text-gray-800 hover:text-primary font-medium py-2">Contact</a>
-                <a href="documente.html" class="nav-link text-gray-800 hover:text-primary font-medium">Documente
+                <a href="documente" class="nav-link text-gray-800 hover:text-primary font-medium">Documente
                     necesare</a>
             </div>
         </div>
@@ -234,7 +232,7 @@
                 Ce faci la <span class="text-primary">ESU</span>?
             </h2>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Workshop-uri -->
                 <div class="activity-card rounded overflow-hidden shadow-lg group relative">
                     <div class="overflow-hidden h-48">
@@ -263,21 +261,20 @@
                 <div class="activity-card rounded overflow-hidden shadow-lg group relative">
                     <div class="overflow-hidden h-48">
                         <img class="w-full h-full object-cover transition-transform duration-500"
-                            src="imagini/olimpiada.JPG" alt="Olimpiada Trăsniților" />
+                            src="imagini/olimpiada.jpg" alt="Olimpiada Trăsniților" />
                     </div>
                     <div class="px-6 py-4">
                         <h3 class="text-xl font-semibold mb-2 text-primary">
                             Olimpiada Trăsniților
                         </h3>
                         <p class="text-gray-700 text-sm">
-                            Participă la competiții amuzante unde pui în practică ce ai
-                            învățat într-o atmosferă relaxată și distractivă.
+                            Participa la o competiție unde îți poți testa abilitățile pe care nu le cunosteai!
                         </p>
                     </div>
                     <div
                         class="activity-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
                         <p class="text-white text-center px-4">
-                            Concurează în echipe și rezolvă provocări electronice creative
+                            Concurează în echipe și rezolvă provocări creative
                             într-un mod distractiv.
                         </p>
                     </div>
@@ -287,14 +284,14 @@
                 <div class="activity-card rounded overflow-hidden shadow-lg group relative">
                     <div class="overflow-hidden h-48">
                         <img class="w-full h-full object-cover transition-transform duration-500"
-                            src="imagini/olimpiada-gal.jpg" alt="Vânătoare de comori" />
+                            src="imagini/treasure.jpeg" alt="Vânătoare de comori" />
                     </div>
                     <div class="px-6 py-4">
                         <h3 class="text-xl font-semibold mb-2 text-primary">
-                            Vânătoare de comori
+                            Treasure Hunt
                         </h3>
                         <p class="text-gray-700 text-sm">
-                            Descoperă Timișoara într-un mod interactiv, rezolvând puzzle-uri
+                            Descoperă Timișoara într-un mod interactiv, rezolvând ghicitori
                             și explorând cele mai frumoase locuri din oraș.
                         </p>
                     </div>
@@ -307,7 +304,7 @@
                     </div>
                 </div>
 
-                <!-- Petreceri și socializare -->
+                <!-- Cursuri si exmane -->
                 <div class="activity-card rounded overflow-hidden shadow-lg group relative">
                     <div class="overflow-hidden h-48">
                         <img class="w-full h-full object-cover transition-transform duration-500"
@@ -315,18 +312,65 @@
                     </div>
                     <div class="px-6 py-4">
                         <h3 class="text-xl font-semibold mb-2 text-primary">
-                            Socializare prin facultate
+                            Cursuri și Examene
                         </h3>
                         <p class="text-gray-700 text-sm">
-                            Leagă prietenii noi și trăiește experiența vieții de student
-                            prin activități de socializare și cursuri interactive.
+                            Cursuri captivante și practice la ESU, unde înveți electronica prin proiecte hands-on!
                         </p>
                     </div>
                     <div
                         class="activity-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
                         <p class="text-white text-center px-4">
-                            Experimentează atmosfera studențească autentică și creează
-                            amintiri de neuitat.
+                            Examenele îți testează creativitatea, pregătindu-te pentru succes în tehnologie!
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- Laboratoare -->
+                <div class="activity-card rounded overflow-hidden shadow-lg group relative lg:col-start-2">
+                    <div class="overflow-hidden h-48">
+                        <img class="w-full h-full object-cover transition-transform duration-500"
+                            src="imagini/laboratoare.jpg" alt="Laboratoare" />
+                    </div>
+                    <div class="px-6 py-4">
+                        <h3 class="text-xl font-semibold mb-2 text-primary">
+                            Vizite la companii
+                        </h3>
+                        <p class="text-gray-700 text-sm">
+                            Experimentează hands-on cu echipamente de ultimă generație și aplică teoria în practică
+                            alături de mentori.
+                        </p>
+                    </div>
+                    <div
+                        class="activity-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <p class="text-white text-center px-4">
+                            Descoperă fascinația electronicii prin experimente reale și pregătește-te pentru viața de
+                            student!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Seri Sociale -->
+                <div class="activity-card rounded overflow-hidden shadow-lg group relative">
+                    <div class="overflow-hidden h-48">
+                        <img class="w-full h-full object-cover transition-transform duration-500"
+                            src="imagini/chitara.jpeg" alt="Seri Sociale" />
+                    </div>
+                    <div class="px-6 py-4">
+                        <h3 class="text-xl font-semibold mb-2 text-primary">
+                            Seri Sociale
+                        </h3>
+                        <p class="text-gray-700 text-sm">
+                            Relaxează-te și leagă prietenii la seri pline de jocuri, muzică și povești alături de colegi
+                            pasionați.
+                        </p>
+                    </div>
+                    <div
+                        class="activity-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <p class="text-white text-center px-4">
+                            Creează amintiri de neuitat și simte vibe-ul studențesc într-o atmosferă caldă și
+                            prietenoasă!
                         </p>
                     </div>
                 </div>
@@ -336,9 +380,9 @@
 
     <!-- Testimonials Section -->
     <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
+        <div class="container mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">
-                Ce spun <span class="text-[#7D1235]">participanții</span>
+                Experința <span class="text-[#7D1235]">foștilor participanții</span>
             </h2>
 
             <div class="relative max-w-5xl mx-auto">
@@ -346,7 +390,7 @@
                 <div class="testimonial-carousel overflow-hidden">
                     <div class="carousel-track flex transition-transform duration-500 ease-in-out">
                         <!-- Testimonial 1 -->
-                        <div class="testimonial-card flex-none w-full md:w-1/2 px-4">
+                        <div class="testimonial-card flex-none w-full  md:w-1/2 px-4">
                             <div class="bg-white p-6 rounded-lg shadow-md h-full">
                                 <div class="flex justify-center mb-4 text-[#7D1235]">
                                     <i class="ri-double-quotes-l ri-3x"></i>
@@ -391,7 +435,7 @@
                                     la maxim. Acest lucru ne-a ajutat sa creăm cele mai frumoase și de neuitat amintiri
                                     care ne vor rămâne în suflet tot restul vieții. Pot spune că ESU a fost mai mult
                                     decât un proces de dezvoltare în viața mea, a fost locul pe care l-am putut numi
-                                    “acasă”.
+                                    “acasă”.<br><br><br><br><br><br>
                                 </p>
                                 <div class="flex items-center justify-center">
                                     <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
@@ -420,7 +464,7 @@
                                     săptămâni am învățat multe lucruri despre facultate dar cel mai important a fost
                                     faptul că am învățat ce înseamnă prietenia și o viață de student alături de cei mai
                                     buni oameni care au potențialul de a ajuta și de a fi într-adevăr o echipă care
-                                    lucrează împreună!
+                                    lucrează împreună!<br><br><br><br>
                                 </p>
                                 <div class="flex items-center justify-center">
                                     <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
@@ -445,7 +489,7 @@
                                     stări diferite. M-am dezvoltat foarte mult pe plan personal și am reușit să înțeleg
                                     mult mai bine oamenii din jurul meu. Deși la început părea greu să mă acomodez, la
                                     final am plecat cu o a doua familie și o mulțime de amintiri unice pe care le-aș
-                                    trăi din nou cu același entuziasm.
+                                    trăi din nou cu același entuziasm.<br><br><br><br><br><br><br><br><br>
                                 </p>
                                 <div class="flex items-center justify-center">
                                     <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
@@ -458,6 +502,229 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Testimonial 5 -->
+                        <div class="testimonial-card flex-none w-full md:w-1/2 px-4">
+                            <div class="bg-white p-6 rounded-lg shadow-md h-full">
+                                <div class="flex justify-center mb-4 text-[#7D1235]">
+                                    <i class="ri-double-quotes-l ri-3x"></i>
+                                </div>
+                                <p class="text-gray-700 mb-6 text-center">
+                                    Pentru mine ESU a fost cea mai
+                                    frumoasă experiență a verii. M-a ajutat
+                                    să văd viața dintr-un alt unghi, dintr-o
+                                    perspectivă cu totul nouă.
+                                    Frumusețea acestui proiect o descoperi
+                                    în momentul în care realizezi că trăiești
+                                    la maxim momente deosebite alături de
+                                    persoane care, deși la început îți sunt
+                                    străine, ulterior ajung să îți fie o
+                                    adevărată familie. Au fost două
+                                    săptămâni pline de învățături,
+                                    descoperiri și emoții. Pentru mine
+                                    fiecare zi a fost o provocare remarcabilă,
+                                    care m-a pus față în față cu limitele
+                                    mele. M-a ajutat să cresc, să învăț lucruri
+                                    noi și să descopăr curajul de a ieși din
+                                    zona de confort.
+                                    ESU este într-adevăr o călătorie care te
+                                    inspiră, te încurajează să visezi și să
+                                    trăiești din plin momente unice alături
+                                    de persoane extraordinare.<br><br><br>
+                                </p>
+                                <div class="flex items-center justify-center">
+                                    <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                        <img src="imagini/copil5.jpg" alt="Elena" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-[#7D1235]">Cărăbaș Rebeca</p>
+                                        <p class="text-sm text-[#BABABB]"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 6 -->
+                        <div class="testimonial-card flex-none w-full md:w-1/2 px-4">
+                            <div class="bg-white p-6 rounded-lg shadow-md h-full">
+                                <div class="flex justify-center mb-4 text-[#7D1235]">
+                                    <i class="ri-double-quotes-l ri-3x"></i>
+                                </div>
+                                <p class="text-gray-700 mb-6 text-center">
+                                    Pentru două săptămâni ESU mi-a fost
+                                    "acasă", iar acest proiect este imposibil
+                                    de descris în câteva cuvinte! Este mai
+                                    mult decât o simplă experiență, pentru
+                                    că, fără să-ți dai seama, ești înconjurat de
+                                    tineri de vârsta ta, iar pasiunile și
+                                    interesele comune vă unesc ca într-o
+                                    familie. M-a ajutat să ies din zona de
+                                    confort, să mă cunosc pe mine însămi și
+                                    a fost pata de culoare de care avea
+                                    nevoie vara lui 2024. Timișoara, cu
+                                    farmecul tău aparte, ai fost decorul ideal
+                                    pentru această experiență!
+                                    Privind în urmă, ESU nu a fost doar o
+                                    etapă a verii mele - a fost un capitol din
+                                    viață pe care îl voi păstra mereu în suflet.<br><br><br><br><br>
+                                </p>
+                                <div class="flex items-center justify-center">
+                                    <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                        <img src="imagini/copil6.jpg" alt="Elena" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-[#7D1235]">Dinu Andreea-Iulia</p>
+                                        <p class="text-sm text-[#BABABB]"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 7 -->
+                        <div class="testimonial-card flex-none w-full md:w-1/2 px-4">
+                            <div class="bg-white p-6 rounded-lg shadow-md h-full">
+                                <div class="flex justify-center mb-4 text-[#7D1235]">
+                                    <i class="ri-double-quotes-l ri-3x"></i>
+                                </div>
+                                <p class="text-gray-700 mb-6 text-center">
+                                    ESU a fost pentru mine o experiență
+                                    unică. A fost și este un loc pe care pot
+                                    să-l numesc acasă, așa cum odată
+                                    numeam căminul la care mă întorceam
+                                    după o zi plină de activități parcurse în
+                                    cadrul programului. Un proiect special
+                                    unde am întâlnit oameni care m-au
+                                    marcat în cel mai bun mod posibil, de la
+                                    participanți la voluntari și organizatori,
+                                    persoane deosebite cu care mai păstrez
+                                    și acum legătura. Cu alte cuvinte, într-un
+                                    mod mai succint, Electronics Summer
+                                    University este mai mult decât o simplă
+                                    Universitate de Vară, este o familie unită
+                                    din care mă simt mândru și onorat să fac
+                                    parte.<br><br><br><br><br>
+                                </p>
+                                <div class="flex items-center justify-center">
+                                    <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                        <img src="imagini/copil7.jpg" alt="Elena" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-[#7D1235]">Luca Daniel</p>
+                                        <p class="text-sm text-[#BABABB]"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 8 -->
+                        <div class="testimonial-card flex-none w-full md:w-1/2 px-4">
+                            <div class="bg-white p-6 rounded-lg shadow-md h-full">
+                                <div class="flex justify-center mb-4 text-[#7D1235]">
+                                    <i class="ri-double-quotes-l ri-3x"></i>
+                                </div>
+                                <p class="text-gray-700 mb-6 text-center">
+                                    Pentru două săptămâni, ESU îți oferă
+                                    bucuria de a simți cum sufletele unor
+                                    necunoscuți ajung să vibreze pe aceleași
+                                    acorduri, îți amintește cât de important
+                                    este să trăiești clipa, să iubești oamenii și
+                                    să fii mereu curios. În puținul timp pe
+                                    care îl vei petrece în Timișoara, o să înveți
+                                    cum să modelezi și cum să te lași
+                                    modelat de alte persoane și vei
+                                    conștientiza uimit că ai găsit leacul
+                                    singurătății.
+                                    Pentru mine, ESU este o poveste vie, fără
+                                    sfârșit, despre mine, despre tine, despre
+                                    noi.<br><br><br><br><br><br><br><br>
+                                </p>
+                                <div class="flex items-center justify-center">
+                                    <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                        <img src="imagini/copil8.jpg" alt="Elena" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-[#7D1235]">Tănăsescu Vlad-Constantin</p>
+                                        <p class="text-sm text-[#BABABB]"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 9 -->
+                        <div class="testimonial-card flex-none w-full md:w-1/2 px-4">
+                            <div class="bg-white p-6 rounded-lg shadow-md h-full">
+                                <div class="flex justify-center mb-4 text-[#7D1235]">
+                                    <i class="ri-double-quotes-l ri-3x"></i>
+                                </div>
+                                <p class="text-gray-700 mb-6 text-center">
+                                    ESU- Energie, Surprize, Unicitate.
+                                    Acest proiect mi-a întrecut orice
+                                    așteptări! În fiecare zi am avut parte de
+                                    experiențe de neuitat și mi-am dat
+                                    seama cât de unici și totuși diferiți
+                                    suntem fiecare dintre noi. Această
+                                    Universitate de Vară m-a făcut să mă
+                                    cunosc mai bine chiar și pe mine, să îmi
+                                    ies din zona de confort, să îmi întrec
+                                    orice limită, distrându-mă la maxim! Am
+                                    cunoscut oameni minunați și am
+                                    înfiripat prietenii cu oameni pe care îi
+                                    pot considera chiar parte din familie.
+                                    Orice participant ESU știe foarte bine că
+                                    pentru a descrie această experiență și
+                                    însemnătatea lui, nu sunt suficiente
+                                    cuvintele!<br><br><br><br><br>
+                                </p>
+                                <div class="flex items-center justify-center">
+                                    <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                        <img src="imagini/copil9.jpg" alt="Elena" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-[#7D1235]">Iacobici Iasmina</p>
+                                        <p class="text-sm text-[#BABABB]"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 10 -->
+                        <div class="testimonial-card flex-none w-full md:w-1/2 px-4">
+                            <div class="bg-white p-6 rounded-lg shadow-md h-full">
+                                <div class="flex justify-center mb-4 text-[#7D1235]">
+                                    <i class="ri-double-quotes-l ri-3x"></i>
+                                </div>
+                                <p class="text-gray-700 mb-6 text-center">
+                                    ESU nu poate fi descris doar prin
+                                    cuvinte, ESU poate fi descris mai ales
+                                    prin momente, trăiri, emoții şi amintiri.
+                                    ESU nu este doar o Universitate de Vară,
+                                    ci este un vis devenit realitate, o
+                                    oportunitate de descoperire şi
+                                    dezvoltare, este o experiență de viață!
+                                    Acest proiect reprezintă mai mult decât
+                                    timpul petrecut împreună cu oameni
+                                    din toată țara, ci este pură emoție, un
+                                    amalgam de zâmbete şi lacrimi. Acest
+                                    proiect are un loc special în inima mea
+                                    alături de toți participanții și
+                                    organizatorii ESU. Sentimentele
+                                    descoperite acolo le cunosc doar cei care
+                                    au trăit experiența şi îmi doresc ca în
+                                    fiecare an să crească numărul
+                                    participanților din ce în ce mai mult,
+                                    pentru ca această familie să crească şi să
+                                    putem crea, la rândul nostru, prin ESU, a
+                                    doua casă pentru sufletele entuziaste şi
+                                    creative!<br><br>
+                                </p>
+                                <div class="flex items-center justify-center">
+                                    <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                        <img src="imagini/copil10.jpg" alt="Elena" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-[#7D1235]">Hoarcă-Codrea Dana</p>
+                                        <p class="text-sm text-[#BABABB]"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
 
@@ -553,7 +820,201 @@
         </div>
     </section>
 
-    <!-- Galerie Section -->
+
+
+    <!-- Ediții Section -->
+    <section id="editii" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">
+                Ediții Anterioare <span class="text-primary">ESU</span>
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Edition 1 -->
+                <div class="edition-card rounded overflow-hidden shadow-lg group relative">
+                    <div class="overflow-hidden h-64">
+                        <img class="w-full h-full object-cover transition-transform duration-500" src="imagini/1.jpg"
+                            alt="Ediția 1 ESU" />
+                    </div>
+                    <div class="px-6 py-4 text-center">
+                        <h3 class="text-xl font-semibold mb-2 text-primary">Ediția 1 (2016)</h3>
+                        <p class="text-gray-700 text-sm">
+                            Prima ediție a ESU a adus împreună elevi pasionați de electronică, cu workshop-uri și
+                            activități interactive.
+                        </p>
+                    </div>
+                    <div
+                        class="edition-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <p class="text-white text-center px-4">
+                            Descoperă cum a început aventura ESU, punând bazele unei tradiții memorabile!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Edition 2 -->
+                <div class="edition-card rounded overflow-hidden shadow-lg group relative">
+                    <div class="overflow-hidden h-64">
+                        <img class="w-full h-full object-cover transition-transform duration-500" src="imagini/2.jpg"
+                            alt="Ediția 2 ESU" />
+                    </div>
+                    <div class="px-6 py-4 text-center">
+                        <h3 class="text-xl font-semibold mb-2 text-primary">Ediția 2 (2017)</h3>
+                        <p class="text-gray-700 text-sm">
+                            A doua ediție a introdus noi provocări, cum ar fi Olimpiada Trăsniților, plină de
+                            distracție.
+                        </p>
+                    </div>
+                    <div
+                        class="edition-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <p class="text-white text-center px-4">
+                            O ediție plină de energie, cu proiecte creative și momente de neuitat!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Edition 3 -->
+                <div class="edition-card rounded overflow-hidden shadow-lg group relative">
+                    <div class="overflow-hidden h-64">
+                        <img class="w-full h-full object-cover transition-transform duration-500" src="imagini/3.jpg"
+                            alt="Ediția 3 ESU" />
+                    </div>
+                    <div class="px-6 py-4 text-center">
+                        <h3 class="text-xl font-semibold mb-2 text-primary">Ediția 3 (2018)</h3>
+                        <p class="text-gray-700 text-sm">
+                            Elevii au explorat Timișoara prin vânătoare de comori și au învățat noi tehnologii.
+                        </p>
+                    </div>
+                    <div
+                        class="edition-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <p class="text-white text-center px-4">
+                            O combinație perfectă între învățare și aventură în inima Timișoarei!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Edition 4 -->
+                <div class="edition-card rounded overflow-hidden shadow-lg group relative">
+                    <div class="overflow-hidden h-64">
+                        <img class="w-full h-full object-cover transition-transform duration-500" src="imagini/4.jpg"
+                            alt="Ediția 4 ESU" />
+                    </div>
+                    <div class="px-6 py-4 text-center">
+                        <h3 class="text-xl font-semibold mb-2 text-primary">Ediția 4 (2019)</h3>
+                        <p class="text-gray-700 text-sm">
+                            Ediția a patra a adus proiecte complexe și seri de socializare memorabile.
+                        </p>
+                    </div>
+                    <div
+                        class="edition-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <p class="text-white text-center px-4">
+                            Prietenii noi și proiectele practice au fost în centrul acestei ediții!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Edition 5 -->
+                <div class="edition-card rounded overflow-hidden shadow-lg group relative">
+                    <div class="overflow-hidden h-64">
+                        <img class="w-full h-full object-cover transition-transform duration-500" src="imagini/5.jpg"
+                            alt="Ediția 5 ESU" />
+                    </div>
+                    <div class="px-6 py-4 text-center">
+                        <h3 class="text-xl font-semibold mb-2 text-primary">Ediția 5 (2020)</h3>
+                        <p class="text-gray-700 text-sm">
+                            O ediție adaptată, cu workshop-uri online și activități creative.
+                        </p>
+                    </div>
+                    <div
+                        class="edition-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <p class="text-white text-center px-4">
+                            Chiar și de la distanță, spiritul ESU a rămas la fel de vibrant!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Edition 6 -->
+                <div class="edition-card rounded overflow-hidden shadow-lg group relative">
+                    <div class="overflow-hidden h-64">
+                        <img class="w-full h-full object-cover transition-transform duration-500" src="imagini/6.jpg"
+                            alt="Ediția 6 ESU" />
+                    </div>
+                    <div class="px-6 py-4 text-center">
+                        <h3 class="text-xl font-semibold mb-2 text-primary">Ediția 6 (2021)</h3>
+                        <p class="text-gray-700 text-sm">
+                            Revenirea la formatul fizic a adus bucurie și noi oportunități de învățare.
+                        </p>
+                    </div>
+                    <div
+                        class="edition-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <p class="text-white text-center px-4">
+                            O reîntoarcere triumfătoare, plină de entuziasm și colaborare!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Edition 7 -->
+                <div class="edition-card rounded overflow-hidden shadow-lg group relative">
+                    <div class="overflow-hidden h-64">
+                        <img class="w-full h-full object-cover transition-transform duration-500" src="imagini/7.jpg"
+                            alt="Ediția 7 ESU" />
+                    </div>
+                    <div class="px-6 py-4 text-center">
+                        <h3 class="text-xl font-semibold mb-2 text-primary">Ediția 7 (2022)</h3>
+                        <p class="text-gray-700 text-sm">
+                            Noi provocări electronice și momente de neuitat în campusul Politehnica.
+                        </p>
+                    </div>
+                    <div
+                        class="edition-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <p class="text-white text-center px-4">
+                            O ediție care a ridicat ștacheta cu proiecte inovatoare!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Edition 8 -->
+                <div class="edition-card rounded overflow-hidden shadow-lg group relative">
+                    <div class="overflow-hidden h-64">
+                        <img class="w-full h-full object-cover transition-transform duration-500" src="imagini/8.jpg"
+                            alt="Ediția 8 ESU" />
+                    </div>
+                    <div class="px-6 py-4 text-center">
+                        <h3 class="text-xl font-semibold mb-2 text-primary">Ediția 8 (2023)</h3>
+                        <p class="text-gray-700 text-sm">
+                            Elevii au experimentat viața de student într-un mod autentic și distractiv.
+                        </p>
+                    </div>
+                    <div
+                        class="edition-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <p class="text-white text-center px-4">
+                            O experiență completă de student, cu învățare și distracție!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Edition 9 -->
+                <div class="edition-card rounded overflow-hidden shadow-lg group relative">
+                    <div class="overflow-hidden h-64">
+                        <img class="w-full h-full object-cover transition-transform duration-500" src="imagini/9.jpg"
+                            alt="Ediția 9 ESU" />
+                    </div>
+                    <div class="px-6 py-4 text-center">
+                        <h3 class="text-xl font-semibold mb-2 text-primary">Ediția 9 (2024)</h3>
+                        <p class="text-gray-700 text-sm">
+                            Cea mai recentă ediție, cu proiecte avansate și noi prietenii legate.
+                        </p>
+                    </div>
+                    <div
+                        class="edition-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <p class="text-white text-center px-4">
+                            O ediție de referință, pregătind terenul pentru viitorul ESU!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="galerie" class="py-20">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">
@@ -597,220 +1058,8 @@
         </div>
     </section>
 
-
-    <!-- Ediții Section -->
-    <section id="editii" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">
-                Ediții Anterioare <span class="text-primary">ESU</span>
-            </h2>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Edition 1 -->
-                <div class="edition-card rounded overflow-hidden shadow-lg group relative">
-                    <div class="overflow-hidden h-64">
-                        <img class="w-full h-full object-cover transition-transform duration-500"
-                            src="imagini/1.jpg" alt="Ediția 1 ESU" />
-                    </div>
-                    <div class="px-6 py-4 text-center">
-                        <h3 class="text-xl font-semibold mb-2 text-primary">Ediția 1 (2016)</h3>
-                        <p class="text-gray-700 text-sm">
-                            Prima ediție a ESU a adus împreună elevi pasionați de electronică, cu workshop-uri și
-                            activități interactive.
-                        </p>
-                    </div>
-                    <div
-                        class="edition-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
-                        <p class="text-white text-center px-4">
-                            Descoperă cum a început aventura ESU, punând bazele unei tradiții memorabile!
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Edition 2 -->
-                <div class="edition-card rounded overflow-hidden shadow-lg group relative">
-                    <div class="overflow-hidden h-64">
-                        <img class="w-full h-full object-cover transition-transform duration-500"
-                            src="imagini/2.jpg" alt="Ediția 2 ESU" />
-                    </div>
-                    <div class="px-6 py-4 text-center">
-                        <h3 class="text-xl font-semibold mb-2 text-primary">Ediția 2 (2017)</h3>
-                        <p class="text-gray-700 text-sm">
-                            A doua ediție a introdus noi provocări, cum ar fi Olimpiada Trăsniților, plină de
-                            distracție.
-                        </p>
-                    </div>
-                    <div
-                        class="edition-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
-                        <p class="text-white text-center px-4">
-                            O ediție plină de energie, cu proiecte creative și momente de neuitat!
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Edition 3 -->
-                <div class="edition-card rounded overflow-hidden shadow-lg group relative">
-                    <div class="overflow-hidden h-64">
-                        <img class="w-full h-full object-cover transition-transform duration-500"
-                            src="imagini/3.jpg" alt="Ediția 3 ESU" />
-                    </div>
-                    <div class="px-6 py-4 text-center">
-                        <h3 class="text-xl font-semibold mb-2 text-primary">Ediția 3 (2018)</h3>
-                        <p class="text-gray-700 text-sm">
-                            Elevii au explorat Timișoara prin vânătoare de comori și au învățat noi tehnologii.
-                        </p>
-                    </div>
-                    <div
-                        class="edition-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
-                        <p class="text-white text-center px-4">
-                            O combinație perfectă între învățare și aventură în inima Timișoarei!
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Edition 4 -->
-                <div class="edition-card rounded overflow-hidden shadow-lg group relative">
-                    <div class="overflow-hidden h-64">
-                        <img class="w-full h-full object-cover transition-transform duration-500"
-                            src="imagini/4.jpg" alt="Ediția 4 ESU" />
-                    </div>
-                    <div class="px-6 py-4 text-center">
-                        <h3 class="text-xl font-semibold mb-2 text-primary">Ediția 4 (2019)</h3>
-                        <p class="text-gray-700 text-sm">
-                            Ediția a patra a adus proiecte complexe și seri de socializare memorabile.
-                        </p>
-                    </div>
-                    <div
-                        class="edition-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
-                        <p class="text-white text-center px-4">
-                            Prietenii noi și proiectele practice au fost în centrul acestei ediții!
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Edition 5 -->
-                <div class="edition-card rounded overflow-hidden shadow-lg group relative">
-                    <div class="overflow-hidden h-64">
-                        <img class="w-full h-full object-cover transition-transform duration-500"
-                            src="imagini/5.jpg" alt="Ediția 5 ESU" />
-                    </div>
-                    <div class="px-6 py-4 text-center">
-                        <h3 class="text-xl font-semibold mb-2 text-primary">Ediția 5 (2020)</h3>
-                        <p class="text-gray-700 text-sm">
-                            O ediție adaptată, cu workshop-uri online și activități creative.
-                        </p>
-                    </div>
-                    <div
-                        class="edition-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
-                        <p class="text-white text-center px-4">
-                            Chiar și de la distanță, spiritul ESU a rămas la fel de vibrant!
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Edition 6 -->
-                <div class="edition-card rounded overflow-hidden shadow-lg group relative">
-                    <div class="overflow-hidden h-64">
-                        <img class="w-full h-full object-cover transition-transform duration-500"
-                            src="imagini/6.jpg" alt="Ediția 6 ESU" />
-                    </div>
-                    <div class="px-6 py-4 text-center">
-                        <h3 class="text-xl font-semibold mb-2 text-primary">Ediția 6 (2021)</h3>
-                        <p class="text-gray-700 text-sm">
-                            Revenirea la formatul fizic a adus bucurie și noi oportunități de învățare.
-                        </p>
-                    </div>
-                    <div
-                        class="edition-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
-                        <p class="text-white text-center px-4">
-                            O reîntoarcere triumfătoare, plină de entuziasm și colaborare!
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Edition 7 -->
-                <div class="edition-card rounded overflow-hidden shadow-lg group relative">
-                    <div class="overflow-hidden h-64">
-                        <img class="w-full h-full object-cover transition-transform duration-500"
-                            src="imagini/7.jpg" alt="Ediția 7 ESU" />
-                    </div>
-                    <div class="px-6 py-4 text-center">
-                        <h3 class="text-xl font-semibold mb-2 text-primary">Ediția 7 (2022)</h3>
-                        <p class="text-gray-700 text-sm">
-                            Noi provocări electronice și momente de neuitat în campusul Politehnica.
-                        </p>
-                    </div>
-                    <div
-                        class="edition-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
-                        <p class="text-white text-center px-4">
-                            O ediție care a ridicat ștacheta cu proiecte inovatoare!
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Edition 8 -->
-                <div class="edition-card rounded overflow-hidden shadow-lg group relative">
-                    <div class="overflow-hidden h-64">
-                        <img class="w-full h-full object-cover transition-transform duration-500"
-                            src="imagini/8.jpg" alt="Ediția 8 ESU" />
-                    </div>
-                    <div class="px-6 py-4 text-center">
-                        <h3 class="text-xl font-semibold mb-2 text-primary">Ediția 8 (2023)</h3>
-                        <p class="text-gray-700 text-sm">
-                            Elevii au experimentat viața de student într-un mod autentic și distractiv.
-                        </p>
-                    </div>
-                    <div
-                        class="edition-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
-                        <p class="text-white text-center px-4">
-                            O experiență completă de student, cu învățare și distracție!
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Edition 9 -->
-                <div class="edition-card rounded overflow-hidden shadow-lg group relative">
-                    <div class="overflow-hidden h-64">
-                        <img class="w-full h-full object-cover transition-transform duration-500"
-                            src="imagini/9.jpg" alt="Ediția 9 ESU" />
-                    </div>
-                    <div class="px-6 py-4 text-center">
-                        <h3 class="text-xl font-semibold mb-2 text-primary">Ediția 9 (2024)</h3>
-                        <p class="text-gray-700 text-sm">
-                            Cea mai recentă ediție, cu proiecte avansate și noi prietenii legate.
-                        </p>
-                    </div>
-                    <div
-                        class="edition-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
-                        <p class="text-white text-center px-4">
-                            O ediție de referință, pregătind terenul pentru viitorul ESU!
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <style>
-        /* FAQ Section Styling */
-        .elementor-section#idfaq {
-            background-color: #f8f1f4;
-            padding: 60px 20px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .elementor-shape-bottom {
-            fill: #7D1235;
-            opacity: 0.1;
-        }
-
-        .elementor-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Heading Styling */
+         /* Heading Styling */
         .elementor-heading-title {
             color: #7D1235;
             font-size: 36px;
@@ -1106,7 +1355,7 @@
 
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Linkuri rapide</h3>
-                    <ul class="space-y-2">
+                    <ul class="space-y-4">
                         <li>
                             <a href="#despre" class="text-gray-400 hover:text-primary transition">Despre ESU</a>
                         </li>
@@ -1128,11 +1377,14 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Parteneri</h3>
                     <div class="flex flex-wrap gap-4">
-                        <a href="https://www.continental.com/" class="bg-gray-800 p-2 rounded">
+                        <a href="https://www.continental.com/" class="bg-gray p-2 rounded">
                             <img src="imagini/continental.png" alt="Logo" class="logo">
                         </a>
-                        <a href="https://www.kimballelectronics.com/" class="bg-gray-800 p-2 rounded">
-                            <img src="imagini/kimbal.png" alt="Logo" class="logo">
+                        <a href="https://www.kimballelectronics.com/" class="bg-gray p-2 rounded">
+                            <img src="imagini/kimball.png" alt="Logo" class="logo">
+                        </a>
+                        <a href="https://www.nokia.com" class="bg-gray p-2 rounded">
+                            <img src="imagini/nokia.png" alt="Logo" class="logo">
                         </a>
                     </div>
                 </div>
@@ -1176,7 +1428,7 @@
             // Header background change on scroll for larger screens
             const header = document.getElementById("header");
             const navLinks = document.querySelectorAll(
-                "a[href='#despre'], a[href='#program'], a[href='#galerie'], a[href='#contact'], a[href='documente.html']"
+                "a[href='#despre'], a[href='#program'], a[href='#galerie'], a[href='#contact'], a[href='documente'], a[href='#editii']"
             );
             const logo = document.querySelector("#header img"); // Assuming the logo is an img tag inside the header
 
@@ -1232,19 +1484,3 @@
 </body>
 
 </html>
-
-<!-- la sectiunea de ce faci la esu: 
-    -adauga laboratoare
-    - descrierea la olimpiada trasnitilor
-    - schimbat vanatoarea de comori in treasure hunt si sa punem ghicitori in loc de puzzle 
-    - fara socializare prin facultate - schimba in cursuri su examene 
-    - leagea noi prietenii si fa alta sectiune pentru descirerea asta in Nopti sociale
-    - simularea cursurilor la sectiunea de facultate
-    - vizite la companii
-de pus mai multe testimoniale
-experienta fostilor participanti in loc de ce spun participantii
-editile anterioare inainte de galerie + mai multe poze la galerie 
-la parteneri adaugat nokia si parteneri educationali upt si etcti
-locatia este si complexul studentesc
-in loc de program in header activitati + buton pentru editii anterioare
--->
