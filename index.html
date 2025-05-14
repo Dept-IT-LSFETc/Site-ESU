@@ -110,6 +110,105 @@
             transform: translateY(-2px);
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
         }
+
+        .numere {
+            background-color: #f9fafb;
+            /* Light background for contrast */
+        }
+
+        .numere .container {
+            max-width: 1200px;
+            /* Consistent with other sections */
+        }
+
+        .numere .grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            /* 5 columns for desktop */
+            gap: 1.5rem;
+            /* Consistent spacing */
+            justify-items: center;
+            align-items: center;
+        }
+
+        .stat-item {
+            text-align: center;
+            align-items: center;
+            padding: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            /* Subtle lift effect on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            /* Soft shadow on hover */
+        }
+
+        .stat-number {
+            background-color: #7D1235;
+            /* Primary color */
+            color: white;
+            font-size: 2.25rem;
+            /* 36px for desktop */
+            font-weight: 700;
+            padding: 0.75rem 1.5rem;
+            /* Comfortable padding */
+            border-radius: 12px;
+            /* Rounded corners */
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .stat-number:hover {
+            background-color: #5f0e28;
+            /* Slightly darker primary color on hover */
+        }
+
+        .stat-text {
+            color: #7D1235;
+            /* Primary color for text */
+            font-size: 1rem;
+            /* 16px for desktop */
+            font-weight: 500;
+            margin-top: 1rem;
+            /* Space between number and text */
+            text-transform: uppercase;
+            /* Consistent with other headings */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .numere .grid {
+                grid-template-columns: repeat(3, 1fr);
+                /* 3 columns for tablets */
+            }
+        }
+
+        @media (max-width: 640px) {
+            .numere .grid {
+                grid-template-columns: repeat(2, 1fr);
+                /* 2 columns for mobile */
+            }
+
+            .stat-number {
+                font-size: 1.75rem;
+                /* 28px for mobile */
+                padding: 0.5rem 1rem;
+            }
+
+            .stat-text {
+                font-size: 0.875rem;
+                /* 14px for mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .numere .grid {
+                grid-template-columns: 1fr;
+                /* 1 column for very small screens */
+            }
+        }
     </style>
 </head>
 
@@ -143,6 +242,7 @@
             <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
                 <a href="#despre" class="text-gray-800 hover:text-primary font-medium py-2">Despre</a>
                 <a href="#program" class="text-gray-800 hover:text-primary font-medium py-2">Activități</a>
+                <a href="#editii" class="text-gray-800 hover:text-primary font-medium py-2">Ediții anterioare</a>
                 <a href="#galerie" class="text-gray-800 hover:text-primary font-medium py-2">Galerie</a>
                 <a href="#contact" class="text-gray-800 hover:text-primary font-medium py-2">Contact</a>
                 <a href="documente" class="nav-link text-gray-800 hover:text-primary font-medium">Documente
@@ -377,6 +477,8 @@
             </div>
         </div>
     </section>
+
+
 
     <!-- Testimonials Section -->
     <section class="py-20 bg-gray-50">
@@ -799,6 +901,45 @@
     </section>
 
 
+    <!-- esu în numere Section -->
+    <section id="numere" class="numere py-20 bg-opacity-20 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12" style="text-align: left;">
+                ESU în <span class="text-primary">numere</span>
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-5 gap-6">
+                <div class="stat-item flex flex-col items-center">
+                    <h3 class="stat-number bg-primary text-white text-3xl md:text-4xl font-bold py-3 px-6 rounded-lg">
+                        600</h3>
+                    <p class="stat-text text-primary text-base md:text-lg mt-4">participanți</p>
+                </div>
+                <div class="stat-item flex flex-col items-center">
+                    <h3 class="stat-number bg-primary text-white text-3xl md:text-4xl font-bold py-3 px-6 rounded-lg">10
+                    </h3>
+                    <p class="stat-text text-primary text-base md:text-lg mt-4">ediții de ESU</p>
+                </div>
+                <div class="stat-item flex flex-col items-center">
+                    <h3 class="stat-number bg-primary text-white text-3xl md:text-4xl font-bold py-3 px-6 rounded-lg">
+                        250
+                    </h3>
+                    <p class="stat-text text-primary text-base md:text-lg mt-4">licee</p>
+                </div>
+                <div class="stat-item flex flex-col items-center">
+                    <h3 class="stat-number bg-primary text-white text-3xl md:text-4xl font-bold py-3 px-6 rounded-lg">
+                        200+</h3>
+                    <p class="stat-text text-primary text-base md:text-lg mt-4">voluntari</p>
+                </div>
+                <div class="stat-item flex flex-col items-center">
+                    <h3 class="stat-number bg-primary text-white text-3xl md:text-4xl font-bold py-3 px-6 rounded-lg">
+                        100%</h3>
+                    <p class="stat-text text-primary text-base md:text-lg mt-4">dedicare</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
     <!-- Înscriere Section -->
     <section id="inscriere" class="py-20 bg-primary bg-opacity-10">
         <div class="container mx-auto px-4 text-center">
@@ -1059,7 +1200,7 @@
     </section>
 
     <style>
-         /* Heading Styling */
+        /* Heading Styling */
         .elementor-heading-title {
             color: #7D1235;
             font-size: 36px;
@@ -1293,44 +1434,34 @@
                         </div>
                     </div>
                 </div>
-
                 <div>
-                    <h3 class="text-2xl font-semibold mb-6 text-primary">
-                        Trimite-ne un mesaj
-                    </h3>
-
-                    <form class="space-y-6">
+                    <form class="space-y-6" method="POST" action="https://formspree.io/f/xbloqdnl">
                         <div class="flex flex-col">
                             <label for="contact-nume" class="mb-2 text-gray-700 font-medium">Nume și prenume</label>
-                            <input type="text" id="contact-nume"
-                                class="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" />
+                            <input type="text" id="contact-nume" name="nume" class="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required />
                         </div>
-
+                    
                         <div class="flex flex-col">
                             <label for="contact-email" class="mb-2 text-gray-700 font-medium">Email</label>
-                            <input type="email" id="contact-email"
-                                class="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" />
+                            <input type="email" id="contact-email" name="email" class="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required />
                         </div>
-
+                    
                         <div class="flex flex-col">
                             <label for="contact-subiect" class="mb-2 text-gray-700 font-medium">Subiect</label>
-                            <input type="text" id="contact-subiect"
-                                class="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" />
+                            <input type="text" id="contact-subiect" name="subiect" class="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required />
                         </div>
-
+                    
                         <div class="flex flex-col">
                             <label for="contact-mesaj" class="mb-2 text-gray-700 font-medium">Mesaj</label>
-                            <textarea id="contact-mesaj" rows="4"
-                                class="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                            <textarea id="contact-mesaj" name="mesaj" rows="4" class="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required></textarea>
                         </div>
-
-                        <button type="submit"
-                            class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">
+                    
+                        <button type="submit" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition whitespace-nowrap">
                             Trimite mesajul
                         </button>
                     </form>
-                </div>
-            </div>
+
+        </div>
         </div>
     </section>
 
@@ -1360,13 +1491,13 @@
                             <a href="#despre" class="text-gray-400 hover:text-primary transition">Despre ESU</a>
                         </li>
                         <li>
-                            <a href="#program" class="text-gray-400 hover:text-primary transition">Program</a>
+                            <a href="#program" class="text-gray-400 hover:text-primary transition">Activități</a>
                         </li>
                         <li>
-                            <a href="#galerie" class="text-gray-400 hover:text-primary transition">Galerie</a>
+                            <a href="#galerie" class="text-gray-400 hover:text-primary transition">Ediții anterioare</a>
                         </li>
                         <li>
-                            <a href="#inscriere" class="text-gray-400 hover:text-primary transition">Înscriere</a>
+                            <a href="#inscriere" class="text-gray-400 hover:text-primary transition">Galerie</a>
                         </li>
                         <li>
                             <a href="#contact" class="text-gray-400 hover:text-primary transition">Contact</a>
